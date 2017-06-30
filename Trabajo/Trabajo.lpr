@@ -1,0 +1,24 @@
+program Trabajo;
+
+{$mode objfpc}{$H+}
+
+uses
+  {$IFDEF UNIX}{$IFDEF UseCThreads}
+  cthreads,
+  {$ENDIF}{$ENDIF}
+  Interfaces, // this includes the LCL widgetset
+  Forms, Sucursales, sucursales2, datosAuditoria, clientemodulo
+  { you can add units after this };
+
+{$R *.res}
+
+begin
+  RequireDerivedFormResource:=True;
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TDataAccessSucursales, DataAccessSucursales);
+  Application.CreateForm(TModuloAuditoria, ModuloAuditoria);
+  Application.CreateForm(TModuloClientes, clientemodulo.ModuloClientes);
+  Application.Run;
+end.
+

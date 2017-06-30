@@ -1,0 +1,166 @@
+object DataAccessSucursales: TDataAccessSucursales
+  OldCreateOrder = False
+  Height = 346
+  HorizontalOffset = 453
+  VerticalOffset = 104
+  Width = 323
+  object ConexionConsultasSucursal: TOracleConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'DBINF'
+    KeepConnection = False
+    Password = 'wc83nq93'
+    Transaction = TransaccionSucursal
+    UserName = 'A20150797'
+    HostName = 'dbinf.inf.pucp.edu.pe'
+    Options = []
+    left = 64
+    top = 32
+  end
+  object TransaccionSucursal: TSQLTransaction
+    Active = True
+    Database = ConexionConsultasSucursal
+    Options = []
+    left = 64
+    top = 111
+  end
+  object ConsultaSucursales: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'CSUCUR'
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'NSUCUR'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CTIPDIR'
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'DIRSUC'
+        DataType = ftString
+        Precision = -1
+        Size = 60
+      end>
+    Active = True
+    Database = ConexionConsultasSucursal
+    Transaction = TransaccionSucursal
+    SQL.Strings = (
+      'SELECT * FROM SUCURSAL'
+    )
+    Options = []
+    Params = <>
+    left = 64
+    top = 200
+  end
+  object DatosSucursales: TDataSource
+    DataSet = ConsultaSucursales
+    left = 64
+    top = 280
+  end
+  object TransaccionEmpleados: TSQLTransaction
+    Active = True
+    Database = ConexionConsultasEmpSucur
+    Options = []
+    left = 176
+    top = 112
+  end
+  object ConsultaEmpleadosSucursal: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'CEMPLEADO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'CSUCUR'
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'CJEFE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOMBRE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'APELLIDO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'FECHA_INGRESO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SUELDO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'FECHA_SALIDA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'DIRECCION'
+        DataType = ftString
+        Precision = -1
+        Size = 80
+      end    
+      item
+        Name = 'EDAD'
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end>
+    Active = True
+    Database = ConexionConsultasSucursal
+    Transaction = TransaccionEmpleados
+    SQL.Strings = (
+      'SELECT * FROM EMPLEADO'
+    )
+    Options = []
+    Params = <>
+    left = 176
+    top = 200
+  end
+  object EmpleadosSucursal: TDataSource
+    DataSet = ConsultaEmpleadosSucursal
+    left = 176
+    top = 280
+  end
+  object ConexionConsultasEmpSucur: TOracleConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'DBINF'
+    KeepConnection = False
+    Password = 'wc83nq93'
+    Transaction = TransaccionEmpleados
+    UserName = 'A20150797'
+    HostName = 'dbinf.inf.pucp.edu.pe'
+    Options = []
+    left = 176
+    top = 32
+  end
+end

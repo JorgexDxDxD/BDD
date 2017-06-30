@@ -1,0 +1,653 @@
+object Form1: TForm1
+  Left = -15
+  Height = 683
+  Top = 19
+  Width = 1345
+  Caption = 'Form1'
+  ClientHeight = 683
+  ClientWidth = 1345
+  OnCreate = FormCreate
+  LCLVersion = '1.6.0.4'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 688
+    Top = 0
+    Width = 1302
+    ActivePage = Clientes
+    TabIndex = 1
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+    end
+    object Clientes: TTabSheet
+      Caption = 'Clientes'
+      ClientHeight = 660
+      ClientWidth = 1294
+      object PanelDeleteClient: TPanel
+        Left = 272
+        Height = 96
+        Top = 520
+        Width = 464
+        ClientHeight = 96
+        ClientWidth = 464
+        TabOrder = 6
+        Visible = False
+        object Label19: TLabel
+          Left = 1
+          Height = 15
+          Top = 1
+          Width = 462
+          Align = alTop
+          Alignment = taCenter
+          Caption = 'Eliminar Cliente'
+          ParentColor = False
+        end
+        object Label20: TLabel
+          Left = 8
+          Height = 15
+          Top = 32
+          Width = 101
+          Caption = 'Codigo del Cliente:'
+          ParentColor = False
+        end
+        object Edit13: TEdit
+          Left = 136
+          Height = 23
+          Top = 32
+          Width = 80
+          NumbersOnly = True
+          TabOrder = 0
+        end
+        object Button4: TButton
+          Left = 304
+          Height = 47
+          Top = 40
+          Width = 151
+          Caption = 'Confirmar'
+          OnClick = Button4Click
+          TabOrder = 1
+        end
+        object Button6: TButton
+          Left = 304
+          Height = 25
+          Top = 8
+          Width = 151
+          Caption = 'Cerrar'
+          OnClick = Button6Click
+          TabOrder = 2
+        end
+      end
+      object PanelCliente: TPanel
+        Left = 272
+        Height = 138
+        Top = 520
+        Width = 950
+        ClientHeight = 138
+        ClientWidth = 950
+        TabOrder = 5
+        Visible = False
+        object NCodClient: TEdit
+          Left = 136
+          Height = 23
+          Top = 24
+          Width = 80
+          NumbersOnly = True
+          TabOrder = 0
+        end
+        object Label8: TLabel
+          Left = 0
+          Height = 15
+          Top = 24
+          Width = 106
+          Caption = '*Codigo del Cliente:'
+          ParentColor = False
+        end
+        object NRazSoc: TEdit
+          Left = 136
+          Height = 23
+          Top = 63
+          Width = 79
+          TabOrder = 1
+        end
+        object Label9: TLabel
+          Left = 0
+          Height = 15
+          Top = 63
+          Width = 74
+          Caption = '*Razón Social:'
+          ParentColor = False
+        end
+        object EtiquetaPanelCliente: TLabel
+          Left = 304
+          Height = 15
+          Top = 0
+          Width = 109
+          Caption = 'EtiquetaPanelCliente'
+          ParentColor = False
+        end
+        object Label10: TLabel
+          Left = 0
+          Height = 15
+          Top = 104
+          Width = 58
+          Caption = '*Dirección:'
+          ParentColor = False
+        end
+        object NDireccion: TEdit
+          Left = 136
+          Height = 23
+          Top = 104
+          Width = 80
+          TabOrder = 2
+        end
+        object Label11: TLabel
+          Left = 232
+          Height = 30
+          Top = 24
+          Width = 75
+          Caption = 'Límite Crédito'#13#10'Total:'
+          ParentColor = False
+          WordWrap = True
+        end
+        object Edit5: TEdit
+          Left = 344
+          Height = 23
+          Top = 24
+          Width = 80
+          TabOrder = 3
+        end
+        object Label12: TLabel
+          Left = 232
+          Height = 30
+          Top = 63
+          Width = 75
+          Caption = 'Límite Crédito'#13#10'Disponible:'
+          ParentColor = False
+        end
+        object Label13: TLabel
+          Left = 232
+          Height = 30
+          Top = 104
+          Width = 88
+          Caption = '*Clasificación de'#13#10'Ventas:'
+          ParentColor = False
+        end
+        object Edit6: TEdit
+          Left = 344
+          Height = 23
+          Top = 63
+          Width = 80
+          TabOrder = 4
+        end
+        object NClasVent: TEdit
+          Left = 344
+          Height = 23
+          Top = 104
+          Width = 80
+          TabOrder = 5
+        end
+        object Label14: TLabel
+          Left = 464
+          Height = 30
+          Top = 24
+          Width = 86
+          Caption = 'Clasificación del'#13#10'Crédito:'
+          ParentColor = False
+        end
+        object Label15: TLabel
+          Left = 464
+          Height = 30
+          Top = 63
+          Width = 60
+          Caption = 'Mensaje de'#13#10'Crédito:'
+          ParentColor = False
+          OnClick = Label15Click
+        end
+        object Label16: TLabel
+          Left = 464
+          Height = 30
+          Top = 104
+          Width = 89
+          Caption = '*Monto Vencido:'#13#10
+          ParentColor = False
+        end
+        object Edit8: TEdit
+          Left = 584
+          Height = 23
+          Top = 24
+          Width = 80
+          TabOrder = 6
+        end
+        object Edit9: TEdit
+          Left = 584
+          Height = 23
+          Top = 63
+          Width = 80
+          TabOrder = 7
+        end
+        object NMontVenc: TEdit
+          Left = 584
+          Height = 23
+          Top = 104
+          Width = 80
+          TabOrder = 8
+        end
+        object Label17: TLabel
+          Left = 697
+          Height = 30
+          Top = 24
+          Width = 83
+          Caption = '*Venta Anterior:'#13#10
+          ParentColor = False
+        end
+        object Label18: TLabel
+          Left = 697
+          Height = 30
+          Top = 63
+          Width = 83
+          Caption = '*Código de'#13#10'Forma de Pago:'
+          ParentColor = False
+        end
+        object NVentAnt: TEdit
+          Left = 792
+          Height = 23
+          Top = 24
+          Width = 80
+          TabOrder = 9
+        end
+        object NCFormPago: TEdit
+          Left = 792
+          Height = 23
+          Top = 63
+          Width = 80
+          TabOrder = 10
+        end
+        object Button7: TButton
+          Left = 700
+          Height = 32
+          Top = 102
+          Width = 172
+          Caption = 'Confirmar'
+          OnClick = Button7Click
+          TabOrder = 11
+        end
+        object Label21: TLabel
+          Left = 760
+          Height = 15
+          Top = 1
+          Width = 79
+          Caption = '*OBLIGATORIO'
+          ParentColor = False
+        end
+        object Button5: TButton
+          Left = 867
+          Height = 16
+          Top = 0
+          Width = 73
+          Caption = 'Cerrar'
+          OnClick = Button5Click
+          TabOrder = 12
+        end
+      end
+      object DBGrid4: TDBGrid
+        Left = 16
+        Height = 432
+        Top = 40
+        Width = 1185
+        Color = clWindow
+        Columns = <>
+        DataSource = ModuloClientes.DatosClientes
+        DefaultRowHeight = 20
+        TabOrder = 0
+      end
+      object Label7: TLabel
+        Left = 24
+        Height = 27
+        Top = 8
+        Width = 94
+        Caption = 'Clientes:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -24
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBNavigator3: TDBNavigator
+        Left = 744
+        Height = 33
+        Top = 480
+        Width = 337
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 33
+        ClientWidth = 337
+        DataSource = ModuloClientes.DatosClientes
+        Options = []
+        TabOrder = 1
+      end
+      object BotonUpdateClient: TButton
+        Left = 40
+        Height = 48
+        Top = 536
+        Width = 216
+        Caption = 'Actualizar Datos del Cliente'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        OnClick = BotonUpdateClientClick
+        ParentFont = False
+        TabOrder = 2
+      end
+      object BotonDeleteClient: TButton
+        Left = 40
+        Height = 50
+        Top = 592
+        Width = 216
+        Caption = 'Eliminar Cliente'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        OnClick = BotonDeleteClientClick
+        ParentFont = False
+        TabOrder = 3
+      end
+      object BotonInsertClient: TButton
+        Left = 40
+        Height = 49
+        Top = 480
+        Width = 216
+        Caption = 'Insertar Cliente'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        OnClick = BotonInsertClientClick
+        ParentFont = False
+        TabOrder = 4
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Sucursales'
+      ClientHeight = 660
+      ClientWidth = 1294
+      object DBGrid1: TDBGrid
+        Left = 0
+        Height = 187
+        Top = 32
+        Width = 392
+        Color = clWindow
+        Columns = <>
+        DataSource = DataAccessSucursales.DatosSucursales
+        TabOrder = 0
+      end
+      object DBGrid2: TDBGrid
+        Left = 424
+        Height = 414
+        Top = 28
+        Width = 821
+        Color = clWindow
+        Columns = <>
+        DataSource = DataAccessSucursales.EmpleadosSucursal
+        TabOrder = 1
+      end
+      object Button1: TButton
+        Left = 192
+        Height = 34
+        Top = 248
+        Width = 128
+        Caption = 'Buscar Sucursal'
+        OnClick = Button1Click
+        TabOrder = 2
+      end
+      object Edit1: TEdit
+        Left = 32
+        Height = 23
+        Top = 256
+        Width = 109
+        NumbersOnly = True
+        OnChange = Edit1Change
+        TabOrder = 3
+      end
+      object Label1: TLabel
+        Left = 32
+        Height = 15
+        Top = 232
+        Width = 122
+        Caption = 'Búsqueda por sucursal:'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 8
+        Height = 29
+        Top = 0
+        Width = 103
+        Caption = 'Sucursales:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -24
+        Font.Name = 'Arial Narrow'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label3: TLabel
+        Left = 424
+        Height = 29
+        Top = 0
+        Width = 229
+        Caption = 'Empleados en la sucursal:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -24
+        Font.Name = 'Arial Narrow'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Button2: TButton
+        Left = 64
+        Height = 72
+        Top = 472
+        Width = 179
+        Caption = 'Ascender Empleado'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        OnClick = Button2Click
+        ParentFont = False
+        TabOrder = 4
+      end
+      object PanelAscenso: TPanel
+        Left = 344
+        Height = 78
+        Top = 472
+        Width = 792
+        ClientHeight = 78
+        ClientWidth = 792
+        TabOrder = 5
+        Visible = False
+        object Button3: TButton
+          Left = 712
+          Height = 25
+          Top = 16
+          Width = 75
+          Caption = 'Ascender'
+          OnClick = Button3Click
+          TabOrder = 0
+        end
+        object CodEmp: TEdit
+          Left = 152
+          Height = 23
+          Top = 16
+          Width = 80
+          NumbersOnly = True
+          TabOrder = 1
+        end
+        object NSueldo: TEdit
+          Left = 360
+          Height = 23
+          Top = 16
+          Width = 80
+          NumbersOnly = True
+          TabOrder = 2
+        end
+        object NSucursal: TEdit
+          Left = 592
+          Height = 23
+          Top = 16
+          Width = 80
+          NumbersOnly = True
+          TabOrder = 3
+        end
+        object Label4: TLabel
+          Left = 16
+          Height = 15
+          Top = 16
+          Width = 117
+          Caption = 'Código del Empleado:'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 272
+          Height = 15
+          Top = 16
+          Width = 77
+          Caption = 'Nuevo Sueldo:'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 504
+          Height = 15
+          Top = 16
+          Width = 84
+          Caption = 'Nueva Sucursal:'
+          ParentColor = False
+        end
+      end
+      object NavegadorSucursales: TDBNavigator
+        Left = 128
+        Height = 25
+        Top = 4
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        DataSource = DataAccessSucursales.DatosSucursales
+        Options = []
+        TabOrder = 6
+      end
+      object DBNavigator1: TDBNavigator
+        Left = 560
+        Height = 25
+        Top = 448
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        DataSource = DataAccessSucursales.EmpleadosSucursal
+        Options = []
+        TabOrder = 7
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'Auditoría'
+      ClientHeight = 660
+      ClientWidth = 1294
+      OnContextPopup = TabSheet4ContextPopup
+      object DBGrid3: TDBGrid
+        Left = 24
+        Height = 434
+        Top = 18
+        Width = 1216
+        Color = clWindow
+        Columns = <>
+        DataSource = ModuloAuditoria.DatosAuditoria
+        TabOrder = 0
+      end
+      object DBNavigator2: TDBNavigator
+        Left = 320
+        Height = 33
+        Top = 456
+        Width = 521
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 33
+        ClientWidth = 521
+        Options = []
+        TabOrder = 1
+      end
+    end
+  end
+  object ScriptAscender: TSQLScript
+    DataBase = Modificaciones
+    Transaction = TransaccionModificaciones
+    Directives.Strings = (
+      'SET TERM'
+      'COMMIT WORK'
+      'COMMIT RETAIN'
+      'COMMIT'
+      '#IFDEF'
+      '#IFNDEF'
+      '#ELSE'
+      '#ENDIF'
+      '#DEFINE'
+      '#UNDEF'
+      '#UNDEFINE'
+    )
+    Terminator = ';'
+    CommentsinSQL = True
+    UseSetTerm = True
+    UseCommit = True
+    UseDefines = True
+    left = 608
+  end
+  object TransaccionModificaciones: TSQLTransaction
+    Active = True
+    Database = Modificaciones
+    Options = []
+    left = 552
+  end
+  object Modificaciones: TOracleConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'DBINF'
+    KeepConnection = False
+    Password = 'wc83nq93'
+    Transaction = TransaccionModificaciones
+    UserName = 'A20150797'
+    HostName = 'dbinf.inf.pucp.edu.pe'
+    Options = []
+    left = 496
+  end
+end

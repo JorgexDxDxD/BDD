@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="10">
+      <Unit0>
+        <Filename Value="Trabajo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="63" Y="10"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="sucursales.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Sucursales"/>
+        <TopLine Value="87"/>
+        <CursorPos X="36" Y="91"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="sucursales2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataAccessSucursales"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="15"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="sucursales2.lfm"/>
+        <EditorIndex Value="4"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\rtl\win32\classes.pp"/>
+        <UnitName Value="Classes"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1393"/>
+        <CursorPos X="15" Y="1403"/>
+        <UsageCount Value="9"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3711"/>
+        <CursorPos X="51" Y="3672"/>
+        <UsageCount Value="9"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\lazarus\lcl\lresources.pp"/>
+        <UnitName Value="LResources"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3153"/>
+        <CursorPos Y="3163"/>
+        <UsageCount Value="11"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="datosauditoria.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ModuloAuditoria"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="datosAuditoria"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="11"/>
+        <CursorPos X="27" Y="15"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="moduloclientes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ModuloClientes"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="moduleclient"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="12"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit9>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="55" Column="33" TopLine="52"/>
+      </Position1>
+      <Position2>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="56" Column="33" TopLine="53"/>
+      </Position2>
+      <Position3>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="57" Column="33" TopLine="54"/>
+      </Position3>
+      <Position4>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="68" Column="3" TopLine="60"/>
+      </Position4>
+      <Position5>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="73" Column="3" TopLine="65"/>
+      </Position5>
+      <Position6>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="74" Column="3" TopLine="66"/>
+      </Position6>
+      <Position7>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="75" Column="3" TopLine="67"/>
+      </Position7>
+      <Position8>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="78" Column="26" TopLine="67"/>
+      </Position8>
+      <Position9>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="77" Column="46" TopLine="67"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Trabajo.lpr"/>
+        <Caret Line="19" Column="71"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Trabajo.lpr"/>
+        <Caret Line="10" Column="33"/>
+      </Position11>
+      <Position12>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="78" TopLine="66"/>
+      </Position12>
+      <Position13>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="79" TopLine="67"/>
+      </Position13>
+      <Position14>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="80" TopLine="68"/>
+      </Position14>
+      <Position15>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="81" TopLine="69"/>
+      </Position15>
+      <Position16>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="80" TopLine="68"/>
+      </Position16>
+      <Position17>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="82" TopLine="70"/>
+      </Position17>
+      <Position18>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="96" TopLine="77"/>
+      </Position18>
+      <Position19>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="47" Column="43" TopLine="43"/>
+      </Position19>
+      <Position20>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="74" Column="99" TopLine="57"/>
+      </Position20>
+      <Position21>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="105" Column="3" TopLine="58"/>
+      </Position21>
+      <Position22>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="106" Column="3" TopLine="84"/>
+      </Position22>
+      <Position23>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="105" Column="3" TopLine="83"/>
+      </Position23>
+      <Position24>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="105" Column="3" TopLine="88"/>
+      </Position24>
+      <Position25>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="106" Column="3" TopLine="89"/>
+      </Position25>
+      <Position26>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="107" Column="3" TopLine="90"/>
+      </Position26>
+      <Position27>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="91" TopLine="90"/>
+      </Position27>
+      <Position28>
+        <Filename Value="sucursales.pas"/>
+        <Caret Line="90" Column="36" TopLine="86"/>
+      </Position28>
+      <Position29>
+        <Filename Value="moduloclientes.pas"/>
+      </Position29>
+      <Position30>
+        <Filename Value="Trabajo.lpr"/>
+        <Caret Line="10" Column="51"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

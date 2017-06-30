@@ -1,0 +1,112 @@
+unit Sucursales;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, sqldb, db, oracleconnection, FileUtil, Forms, Controls,
+  Graphics, Dialogs, ComCtrls, DBGrids, StdCtrls, ExtCtrls, ButtonPanel,
+  ActnList, DbCtrls, sucursales2, Types;
+
+type
+
+  { TForm1 }
+
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    DBGrid1: TDBGrid;
+    DBGrid2: TDBGrid;
+    DBGrid3: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    DBNavigator2: TDBNavigator;
+    NavegadorSucursales: TDBNavigator;
+    Edit1: TEdit;
+    CodEmp: TEdit;
+    NSueldo: TEdit;
+    NSucursal: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Modificaciones: TOracleConnection;
+    PageControl1: TPageControl;
+    PanelAscenso: TPanel;
+    ScriptAscender: TSQLScript;
+    TabSheet4: TTabSheet;
+    TransaccionModificaciones: TSQLTransaction;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    TabSheet3: TTabSheet;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure TabSheet4ContextPopup(Sender: TObject; MousePos: TPoint;
+      var Handled: Boolean);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  if Edit1.Text <> '' then begin
+     sucursales2.DataAccessSucursales.ConsultaEmpleadosSucursal.Active:=False;
+     sucursales2.DataAccessSucursales.ConsultaEmpleadosSucursal.SQL.Text:='SELECT * FROM EMPLEADO WHERE CSUCUR =' + Edit1.Text;
+     sucursales2.DataAccessSucursales.ConsultaEmpleadosSucursal.Active:=True;
+  end
+  else begin
+     sucursales2.DataAccessSucursales.ConsultaEmpleadosSucursal.Active:=False;
+     sucursales2.DataAccessSucursales.ConsultaEmpleadosSucursal.SQL.Text:='SELECT * FROM EMPLEADO';
+     sucursales2.DataAccessSucursales.ConsultaEmpleadosSucursal.Active:=True;
+  end;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  PanelAscenso.Visible:=True;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  ScriptAscender.Script.Text:='CALL ASCENDER_EMP('+CodEmp.Text+','+ NSueldo.Text+','+NSucursal.Text+');';
+  ScriptAscender.ExecuteScript;
+  TransaccionModificaciones.Commit;
+  PanelAscenso.Visible:=False;
+end;
+
+procedure TForm1.Edit1Change(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.TabSheet4ContextPopup(Sender: TObject; MousePos: TPoint;
+  var Handled: Boolean);
+begin
+
+end;
+
+
+end.
+

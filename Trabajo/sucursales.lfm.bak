@@ -1,0 +1,299 @@
+object Form1: TForm1
+  Left = 104
+  Height = 614
+  Top = 62
+  Width = 1345
+  Caption = 'Form1'
+  ClientHeight = 614
+  ClientWidth = 1345
+  OnCreate = FormCreate
+  LCLVersion = '1.6.0.4'
+  object PageControl1: TPageControl
+    Left = 8
+    Height = 592
+    Top = 24
+    Width = 1294
+    ActivePage = TabSheet3
+    TabIndex = 2
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'TabSheet2'
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Sucursales'
+      ClientHeight = 564
+      ClientWidth = 1286
+      object DBGrid1: TDBGrid
+        Left = 0
+        Height = 187
+        Top = 32
+        Width = 392
+        Color = clWindow
+        Columns = <>
+        DataSource = DataAccessSucursales.DatosSucursales
+        TabOrder = 0
+      end
+      object DBGrid2: TDBGrid
+        Left = 424
+        Height = 414
+        Top = 28
+        Width = 821
+        Color = clWindow
+        Columns = <>
+        DataSource = DataAccessSucursales.EmpleadosSucursal
+        TabOrder = 1
+      end
+      object Button1: TButton
+        Left = 192
+        Height = 34
+        Top = 248
+        Width = 128
+        Caption = 'Buscar Sucursal'
+        OnClick = Button1Click
+        TabOrder = 2
+      end
+      object Edit1: TEdit
+        Left = 32
+        Height = 23
+        Top = 256
+        Width = 109
+        NumbersOnly = True
+        OnChange = Edit1Change
+        TabOrder = 3
+      end
+      object Label1: TLabel
+        Left = 32
+        Height = 15
+        Top = 232
+        Width = 122
+        Caption = 'Búsqueda por sucursal:'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 8
+        Height = 29
+        Top = 0
+        Width = 103
+        Caption = 'Sucursales:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -24
+        Font.Name = 'Arial Narrow'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label3: TLabel
+        Left = 424
+        Height = 29
+        Top = 0
+        Width = 229
+        Caption = 'Empleados en la sucursal:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -24
+        Font.Name = 'Arial Narrow'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Button2: TButton
+        Left = 64
+        Height = 72
+        Top = 472
+        Width = 179
+        Caption = 'Ascender Empleado'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        OnClick = Button2Click
+        ParentFont = False
+        TabOrder = 4
+      end
+      object PanelAscenso: TPanel
+        Left = 344
+        Height = 78
+        Top = 472
+        Width = 792
+        ClientHeight = 78
+        ClientWidth = 792
+        TabOrder = 5
+        Visible = False
+        object Button3: TButton
+          Left = 712
+          Height = 25
+          Top = 16
+          Width = 75
+          Caption = 'Ascender'
+          OnClick = Button3Click
+          TabOrder = 0
+        end
+        object CodEmp: TEdit
+          Left = 152
+          Height = 23
+          Top = 16
+          Width = 80
+          NumbersOnly = True
+          TabOrder = 1
+        end
+        object NSueldo: TEdit
+          Left = 360
+          Height = 23
+          Top = 16
+          Width = 80
+          NumbersOnly = True
+          TabOrder = 2
+        end
+        object NSucursal: TEdit
+          Left = 592
+          Height = 23
+          Top = 16
+          Width = 80
+          NumbersOnly = True
+          TabOrder = 3
+        end
+        object Label4: TLabel
+          Left = 16
+          Height = 15
+          Top = 16
+          Width = 117
+          Caption = 'Código del Empleado:'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 272
+          Height = 15
+          Top = 16
+          Width = 77
+          Caption = 'Nuevo Sueldo:'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 504
+          Height = 15
+          Top = 16
+          Width = 84
+          Caption = 'Nueva Sucursal:'
+          ParentColor = False
+        end
+      end
+      object NavegadorSucursales: TDBNavigator
+        Left = 128
+        Height = 25
+        Top = 4
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        DataSource = DataAccessSucursales.DatosSucursales
+        Options = []
+        TabOrder = 6
+      end
+      object DBNavigator1: TDBNavigator
+        Left = 560
+        Height = 25
+        Top = 448
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        DataSource = DataAccessSucursales.EmpleadosSucursal
+        Options = []
+        TabOrder = 7
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'Auditoría'
+      ClientHeight = 564
+      ClientWidth = 1286
+      OnContextPopup = TabSheet4ContextPopup
+      object DBGrid3: TDBGrid
+        Left = 24
+        Height = 434
+        Top = 18
+        Width = 1216
+        Color = clWindow
+        Columns = <>
+        DataSource = ModuloAuditoria.DatosAuditoria
+        TabOrder = 0
+      end
+      object DBNavigator2: TDBNavigator
+        Left = 320
+        Height = 33
+        Top = 456
+        Width = 521
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 33
+        ClientWidth = 521
+        Options = []
+        TabOrder = 1
+      end
+    end
+  end
+  object ScriptAscender: TSQLScript
+    DataBase = Modificaciones
+    Transaction = TransaccionModificaciones
+    Directives.Strings = (
+      'SET TERM'
+      'COMMIT WORK'
+      'COMMIT RETAIN'
+      'COMMIT'
+      '#IFDEF'
+      '#IFNDEF'
+      '#ELSE'
+      '#ENDIF'
+      '#DEFINE'
+      '#UNDEF'
+      '#UNDEFINE'
+    )
+    Terminator = ';'
+    CommentsinSQL = True
+    UseSetTerm = True
+    UseCommit = True
+    UseDefines = True
+    left = 536
+    top = 576
+  end
+  object TransaccionModificaciones: TSQLTransaction
+    Active = True
+    Database = Modificaciones
+    Options = []
+    left = 480
+    top = 576
+  end
+  object Modificaciones: TOracleConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'DBINF'
+    KeepConnection = False
+    Password = 'wc83nq93'
+    Transaction = TransaccionModificaciones
+    UserName = 'A20150797'
+    HostName = 'dbinf.inf.pucp.edu.pe'
+    Options = []
+    left = 496
+  end
+end

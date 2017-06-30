@@ -1,0 +1,44 @@
+object ModuloAuditoria: TModuloAuditoria
+  OldCreateOrder = False
+  Height = 286
+  HorizontalOffset = 259
+  VerticalOffset = 167
+  Width = 226
+  object ConexionAuditoria: TOracleConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'DBINF'
+    KeepConnection = False
+    Password = 'wc83nq93'
+    Transaction = TransaccionAuditoria
+    UserName = 'A20150797'
+    HostName = 'dbinf.inf.pucp.edu.pe'
+    Options = []
+    left = 80
+    top = 16
+  end
+  object TransaccionAuditoria: TSQLTransaction
+    Active = True
+    Database = ConexionAuditoria
+    Options = []
+    left = 80
+    top = 80
+  end
+  object ConsultaAuditoria: TSQLQuery
+    FieldDefs = <>
+    Database = ConexionAuditoria
+    Transaction = TransaccionAuditoria
+    SQL.Strings = (
+      'SELECT * FROM AUDITORIA'
+    )
+    Options = []
+    Params = <>
+    left = 80
+    top = 160
+  end
+  object DatosAuditoria: TDataSource
+    DataSet = ConsultaAuditoria
+    left = 80
+    top = 232
+  end
+end

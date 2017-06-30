@@ -1,0 +1,89 @@
+object ModuloAuditoria: TModuloAuditoria
+  OldCreateOrder = False
+  Height = 286
+  HorizontalOffset = 361
+  VerticalOffset = 169
+  Width = 226
+  object ConexionAuditoria: TOracleConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'DBINF'
+    KeepConnection = False
+    Password = 'wc83nq93'
+    Transaction = TransaccionAuditoria
+    UserName = 'A20150797'
+    HostName = 'dbinf.inf.pucp.edu.pe'
+    Options = []
+    left = 80
+    top = 16
+  end
+  object TransaccionAuditoria: TSQLTransaction
+    Active = True
+    Database = ConexionAuditoria
+    Options = []
+    left = 80
+    top = 80
+  end
+  object ConsultaAuditoria: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'CPRODUC'
+        DataType = ftBCD
+        Precision = -1
+      end    
+      item
+        Name = 'CCLIENT'
+        DataType = ftString
+        Precision = -1
+        Size = 11
+      end    
+      item
+        Name = 'ACCION'
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'USUARIO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TERMINAL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'FECHAMOD'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'APROBADO'
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'FECHACRE'
+        DataType = ftDate
+        Precision = -1
+      end>
+    Active = True
+    Database = ConexionAuditoria
+    Transaction = TransaccionAuditoria
+    SQL.Strings = (
+      'SELECT * FROM AUDITORIA'
+    )
+    Options = []
+    Params = <>
+    left = 80
+    top = 160
+  end
+  object DatosAuditoria: TDataSource
+    DataSet = ConsultaAuditoria
+    left = 80
+    top = 232
+  end
+end

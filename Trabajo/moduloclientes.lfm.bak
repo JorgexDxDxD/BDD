@@ -1,0 +1,111 @@
+object ModuloClientes: TModuloClientes
+  OldCreateOrder = False
+  Height = 318
+  HorizontalOffset = 394
+  VerticalOffset = 166
+  Width = 205
+  object ConexionClientes: TOracleConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'DBINF'
+    KeepConnection = False
+    Password = 'wc83nq93'
+    Transaction = TransaccionClientes
+    UserName = 'A20150797'
+    HostName = 'dbinf.inf.pucp.edu.pe'
+    Options = []
+    left = 72
+    top = 24
+  end
+  object TransaccionClientes: TSQLTransaction
+    Active = True
+    Database = ConexionClientes
+    Options = []
+    left = 72
+    top = 88
+  end
+  object ConsultaClientes: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'CCLIENT'
+        DataType = ftString
+        Precision = -1
+        Size = 11
+      end    
+      item
+        Name = 'DRAZSOC'
+        DataType = ftString
+        Precision = -1
+        Size = 60
+      end    
+      item
+        Name = 'DDIREC'
+        DataType = ftString
+        Precision = -1
+        Size = 60
+      end    
+      item
+        Name = 'ILINCRET'
+        DataType = ftBCD
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'ILINCRED'
+        DataType = ftBCD
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'CCLAVEN'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CCALCRE'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'DMENCRE'
+        DataType = ftString
+        Precision = -1
+        Size = 60
+      end    
+      item
+        Name = 'IMONVED'
+        DataType = ftBCD
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'IVTAANT'
+        DataType = ftBCD
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'CFORPAG'
+        DataType = ftSmallint
+        Precision = -1
+      end>
+    Active = True
+    Database = ConexionClientes
+    Transaction = TransaccionClientes
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE'
+    )
+    Options = []
+    Params = <>
+    left = 72
+    top = 152
+  end
+  object DatosClientes: TDataSource
+    DataSet = ConsultaClientes
+    left = 72
+    top = 216
+  end
+end
